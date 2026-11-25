@@ -78,6 +78,14 @@
         radial-gradient(circle at 18% 12%, rgba(129, 140, 248, 0.14), transparent 42%),
         radial-gradient(circle at 82% 20%, rgba(52, 211, 153, 0.10), transparent 40%);
     }
+
+    /* Collapsible career role cards */
+    .era-summary { list-style: none; }
+    .era-summary::-webkit-details-marker { display: none; }
+    details[open] > .era-summary { border-bottom: 1px solid #1E293B; padding-bottom: 1rem; }
+    details[open] > .era-summary .era-chevron { transform: rotate(180deg); }
+    .era-summary:hover .era-chevron { border-color: #818CF8; color: #818CF8; }
+    .era-summary:focus-visible { outline: 2px solid #818CF8; outline-offset: 6px; border-radius: 8px; }
   </style>
 </head>
 <body class="antialiased selection:bg-accent selection:text-surface">
@@ -458,8 +466,8 @@
 <!-- Role Cards List -->
 <div class="mt-10 space-y-6">
 <!-- ROLE 1 -->
-<article data-era-group="ai-growth" class="era-card rounded-2xl border border-accent/40 bg-card p-6 shadow-card sm:p-8 fade-up">
-<div class="flex flex-wrap items-start justify-between gap-3 border-b border-line pb-4">
+<details open data-era-group="ai-growth" class="era-card rounded-2xl border border-accent/40 bg-card p-6 shadow-card sm:p-8 fade-up">
+<summary class="era-summary flex cursor-pointer flex-wrap items-start justify-between gap-3 pb-0">
 <div>
 <div class="flex flex-wrap items-center gap-2">
 <span class="rounded-full border border-accent/30 bg-accentSoft px-3 py-1 text-xs font-bold text-accent">July 2026 – Present</span>
@@ -467,8 +475,8 @@
 </div>
 <h3 class="mt-2.5 font-heading text-xl font-bold text-ink">Program Strategist – AI Strategy and Transformation, IBM Marketing</h3>
 </div>
-<span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-accent">Era: AI &amp; Growth Leadership</span>
-</div>
+<div class="flex items-center gap-2.5"><span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-accent">Era: AI &amp; Growth Leadership</span><span class="era-chevron flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-lineWarm text-muted transition-transform"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg></span></div>
+</summary>
 <ul class="mt-4 space-y-2.5 text-sm leading-relaxed text-muted">
 <li class="flex items-start gap-2.5">
 <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent">
@@ -496,10 +504,10 @@
 <span>Partner with data, CRM, marketing automation, and platform teams while establishing KPIs, ROI baselines, governance, privacy, and team upskilling.</span>
 </li>
 </ul>
-</article>
+</details>
 <!-- ROLE 2 -->
-<article data-era-group="ai-growth" class="era-card rounded-2xl border border-lineWarm bg-card p-6 shadow-card sm:p-8 fade-up">
-<div class="flex flex-wrap items-start justify-between gap-3 border-b border-line pb-4">
+<details data-era-group="ai-growth" class="era-card rounded-2xl border border-lineWarm bg-card p-6 shadow-card sm:p-8 fade-up">
+<summary class="era-summary flex cursor-pointer flex-wrap items-start justify-between gap-3 pb-0">
 <div>
 <div class="flex flex-wrap items-center gap-2">
 <span class="rounded-full border border-lineWarm bg-surface px-3 py-1 text-xs font-bold text-ink">Sep 2025 – Jul 2026</span>
@@ -507,8 +515,8 @@
 </div>
 <h3 class="mt-2.5 font-heading text-xl font-bold text-ink">Demand Generation and Analytics Professional, IBM Marketing</h3>
 </div>
-<span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-muted">Era: AI &amp; Growth Leadership</span>
-</div>
+<div class="flex items-center gap-2.5"><span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-muted">Era: AI &amp; Growth Leadership</span><span class="era-chevron flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-lineWarm text-muted transition-transform"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg></span></div>
+</summary>
 <ul class="mt-4 space-y-2.5 text-sm leading-relaxed text-muted">
 <li class="flex items-start gap-2.5">
 <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emeraldGlow">
@@ -531,10 +539,10 @@
 <span>Partnered closely with sales teams on lead handoffs, unified messaging, A/B testing, and executive performance reporting.</span>
 </li>
 </ul>
-</article>
+</details>
 <!-- ROLE 3 -->
-<article data-era-group="ibm-core" class="era-card rounded-2xl border border-lineWarm bg-card p-6 shadow-card sm:p-8 fade-up">
-<div class="flex flex-wrap items-start justify-between gap-3 border-b border-line pb-4">
+<details data-era-group="ibm-core" class="era-card rounded-2xl border border-lineWarm bg-card p-6 shadow-card sm:p-8 fade-up">
+<summary class="era-summary flex cursor-pointer flex-wrap items-start justify-between gap-3 pb-0">
 <div>
 <div class="flex flex-wrap items-center gap-2">
 <span class="rounded-full border border-lineWarm bg-surface px-3 py-1 text-xs font-bold text-ink">July 2021 – Sep 2025</span>
@@ -542,8 +550,8 @@
 </div>
 <h3 class="mt-2.5 font-heading text-xl font-bold text-ink">Project Lead, Marketing Analytics and Insights – Performance Management</h3>
 </div>
-<span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-muted">Era: Analytics, ABM &amp; Advocacy</span>
-</div>
+<div class="flex items-center gap-2.5"><span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-muted">Era: Analytics, ABM &amp; Advocacy</span><span class="era-chevron flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-lineWarm text-muted transition-transform"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg></span></div>
+</summary>
 <ul class="mt-4 space-y-2.5 text-sm leading-relaxed text-muted">
 <li class="flex items-start gap-2.5">
 <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent">
@@ -566,10 +574,10 @@
 <span>Built and launched a flagship sales &amp; marketing performance visualization tool from ideation to production in 9 months (<strong class="font-semibold text-ink">Q1 2023 Quarterly Entrepreneur Award</strong>).</span>
 </li>
 </ul>
-</article>
+</details>
 <!-- ROLE 4 -->
-<article data-era-group="ibm-core" class="era-card rounded-2xl border border-lineWarm bg-card p-6 shadow-card sm:p-8 fade-up">
-<div class="flex flex-wrap items-start justify-between gap-3 border-b border-line pb-4">
+<details data-era-group="ibm-core" class="era-card rounded-2xl border border-lineWarm bg-card p-6 shadow-card sm:p-8 fade-up">
+<summary class="era-summary flex cursor-pointer flex-wrap items-start justify-between gap-3 pb-0">
 <div>
 <div class="flex flex-wrap items-center gap-2">
 <span class="rounded-full border border-lineWarm bg-surface px-3 py-1 text-xs font-bold text-ink">Jan 2019 – Jun 2021</span>
@@ -577,8 +585,8 @@
 </div>
 <h3 class="mt-2.5 font-heading text-xl font-bold text-ink">Marketing Analytics Lead, Account-Based Marketing</h3>
 </div>
-<span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-muted">Era: Analytics, ABM &amp; Advocacy</span>
-</div>
+<div class="flex items-center gap-2.5"><span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-muted">Era: Analytics, ABM &amp; Advocacy</span><span class="era-chevron flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-lineWarm text-muted transition-transform"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg></span></div>
+</summary>
 <ul class="mt-4 space-y-2.5 text-sm leading-relaxed text-muted">
 <li class="flex items-start gap-2.5">
 <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-warm">
@@ -601,10 +609,10 @@
 <span>Earned <strong class="font-semibold text-ink">Trailblazer of the Quarter (2021, $37M ABM impact)</strong> and <strong class="font-semibold text-ink">Innovation Expert Award IBM MSC Asia (2020)</strong>.</span>
 </li>
 </ul>
-</article>
+</details>
 <!-- ROLE 5 -->
-<article data-era-group="ibm-core" class="era-card rounded-2xl border border-lineWarm bg-card p-6 shadow-card sm:p-8 fade-up">
-<div class="flex flex-wrap items-start justify-between gap-3 border-b border-line pb-4">
+<details data-era-group="ibm-core" class="era-card rounded-2xl border border-lineWarm bg-card p-6 shadow-card sm:p-8 fade-up">
+<summary class="era-summary flex cursor-pointer flex-wrap items-start justify-between gap-3 pb-0">
 <div>
 <div class="flex flex-wrap items-center gap-2">
 <span class="rounded-full border border-lineWarm bg-surface px-3 py-1 text-xs font-bold text-ink">Dec 2017 – Dec 2019</span>
@@ -612,8 +620,8 @@
 </div>
 <h3 class="mt-2.5 font-heading text-xl font-bold text-ink">Advisor, Client Advocacy &amp; NPS Analysis</h3>
 </div>
-<span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-muted">Era: Analytics, ABM &amp; Advocacy</span>
-</div>
+<div class="flex items-center gap-2.5"><span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-muted">Era: Analytics, ABM &amp; Advocacy</span><span class="era-chevron flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-lineWarm text-muted transition-transform"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg></span></div>
+</summary>
 <ul class="mt-4 space-y-2.5 text-sm leading-relaxed text-muted">
 <li class="flex items-start gap-2.5">
 <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent">
@@ -631,10 +639,10 @@
 <span>Established Client Experience Maturity benchmarks across Business Units, Markets, and Functions, presenting insights to C-level executives and leadership.</span>
 </li>
 </ul>
-</article>
+</details>
 <!-- ROLE 6 -->
-<article data-era-group="ibm-core" class="era-card rounded-2xl border border-lineWarm bg-card p-6 shadow-card sm:p-8 fade-up">
-<div class="flex flex-wrap items-start justify-between gap-3 border-b border-line pb-4">
+<details data-era-group="ibm-core" class="era-card rounded-2xl border border-lineWarm bg-card p-6 shadow-card sm:p-8 fade-up">
+<summary class="era-summary flex cursor-pointer flex-wrap items-start justify-between gap-3 pb-0">
 <div>
 <div class="flex flex-wrap items-center gap-2">
 <span class="rounded-full border border-lineWarm bg-surface px-3 py-1 text-xs font-bold text-ink">Oct 2014 – Nov 2017</span>
@@ -642,8 +650,8 @@
 </div>
 <h3 class="mt-2.5 font-heading text-xl font-bold text-ink">Analyst, Social Insights and Cognitive Tools</h3>
 </div>
-<span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-muted">Era: Analytics, ABM &amp; Advocacy</span>
-</div>
+<div class="flex items-center gap-2.5"><span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-muted">Era: Analytics, ABM &amp; Advocacy</span><span class="era-chevron flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-lineWarm text-muted transition-transform"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg></span></div>
+</summary>
 <ul class="mt-4 space-y-2.5 text-sm leading-relaxed text-muted">
 <li class="flex items-start gap-2.5">
 <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent">
@@ -661,10 +669,10 @@
 <span>Simplified IBM Enterprise Social Solutions brand architecture using social and SEO data and guided portfolio leaders on Power8 and cloud audience targeting.</span>
 </li>
 </ul>
-</article>
+</details>
 <!-- ROLE 7 (PRE-IBM) -->
-<article data-era-group="early-career" class="era-card rounded-2xl border border-lineWarm bg-card p-6 shadow-card sm:p-8 fade-up">
-<div class="flex flex-wrap items-start justify-between gap-3 border-b border-line pb-4">
+<details data-era-group="early-career" class="era-card rounded-2xl border border-lineWarm bg-card p-6 shadow-card sm:p-8 fade-up">
+<summary class="era-summary flex cursor-pointer flex-wrap items-start justify-between gap-3 pb-0">
 <div>
 <div class="flex flex-wrap items-center gap-2">
 <span class="rounded-full border border-warm/30 bg-warmSoft px-3 py-1 text-xs font-bold text-warm">March 2014 – August 2014</span>
@@ -672,8 +680,8 @@
 </div>
 <h3 class="mt-2.5 font-heading text-xl font-bold text-ink">Business Development Manager</h3>
 </div>
-<span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-warm">Era: Media Intelligence &amp; BD</span>
-</div>
+<div class="flex items-center gap-2.5"><span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-warm">Era: Media Intelligence &amp; BD</span><span class="era-chevron flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-lineWarm text-muted transition-transform"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg></span></div>
+</summary>
 <ul class="mt-4 space-y-2.5 text-sm leading-relaxed text-muted">
 <li class="flex items-start gap-2.5">
 <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-warm">
@@ -686,10 +694,10 @@
 <span>Conceptualized and organized thought-leadership programs bridging international Key Opinion Leaders (KOLs), entrepreneurs, and tech gurus with premier institutes in India.</span>
 </li>
 </ul>
-</article>
+</details>
 <!-- ROLE 8 (PRE-IBM) -->
-<article data-era-group="early-career" class="era-card rounded-2xl border border-lineWarm bg-card p-6 shadow-card sm:p-8 fade-up">
-<div class="flex flex-wrap items-start justify-between gap-3 border-b border-line pb-4">
+<details data-era-group="early-career" class="era-card rounded-2xl border border-lineWarm bg-card p-6 shadow-card sm:p-8 fade-up">
+<summary class="era-summary flex cursor-pointer flex-wrap items-start justify-between gap-3 pb-0">
 <div>
 <div class="flex flex-wrap items-center gap-2">
 <span class="rounded-full border border-warm/30 bg-warmSoft px-3 py-1 text-xs font-bold text-warm">April 2013 – December 2013</span>
@@ -697,8 +705,8 @@
 </div>
 <h3 class="mt-2.5 font-heading text-xl font-bold text-ink">Business Analyst, Media Analytics &amp; Measurement</h3>
 </div>
-<span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-warm">Era: Media Intelligence &amp; BD</span>
-</div>
+<div class="flex items-center gap-2.5"><span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-warm">Era: Media Intelligence &amp; BD</span><span class="era-chevron flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-lineWarm text-muted transition-transform"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg></span></div>
+</summary>
 <ul class="mt-4 space-y-2.5 text-sm leading-relaxed text-muted">
 <li class="flex items-start gap-2.5">
 <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-warm">
@@ -711,10 +719,10 @@
 <span>Delivered competitive landscape analysis across end-user computing, software-defined data centers, and hybrid technology, alongside US FDA drug launch tracking and major oncology conference coverage (ASCO, ECS).</span>
 </li>
 </ul>
-</article>
+</details>
 <!-- ROLE 9 (PRE-IBM) -->
-<article data-era-group="early-career" class="era-card rounded-2xl border border-lineWarm bg-card p-6 shadow-card sm:p-8 fade-up">
-<div class="flex flex-wrap items-start justify-between gap-3 border-b border-line pb-4">
+<details data-era-group="early-career" class="era-card rounded-2xl border border-lineWarm bg-card p-6 shadow-card sm:p-8 fade-up">
+<summary class="era-summary flex cursor-pointer flex-wrap items-start justify-between gap-3 pb-0">
 <div>
 <div class="flex flex-wrap items-center gap-2">
 <span class="rounded-full border border-warm/30 bg-warmSoft px-3 py-1 text-xs font-bold text-warm">July 2010 – March 2013</span>
@@ -722,8 +730,8 @@
 </div>
 <h3 class="mt-2.5 font-heading text-xl font-bold text-ink">Senior Associate &amp; Media Analyst, Media Analytics &amp; Monitoring</h3>
 </div>
-<span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-warm">Era: Media Intelligence &amp; BD</span>
-</div>
+<div class="flex items-center gap-2.5"><span class="rounded-lg border border-lineWarm bg-surface px-3 py-1.5 text-xs font-semibold text-warm">Era: Media Intelligence &amp; BD</span><span class="era-chevron flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-lineWarm text-muted transition-transform"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg></span></div>
+</summary>
 <ul class="mt-4 space-y-2.5 text-sm leading-relaxed text-muted">
 <li class="flex items-start gap-2.5">
 <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-warm">
@@ -736,7 +744,7 @@
 <span>Built competitive intelligence, sentiment/tonality benchmarks, and third-party PR efficacy reports, while leading client presentations and team training sessions.</span>
 </li>
 </ul>
-</article>
+</details>
 </div>
 </div>
 </section>
