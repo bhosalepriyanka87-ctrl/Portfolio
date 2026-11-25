@@ -1055,6 +1055,13 @@
 </div>
 </footer>
 <script>
+    // Always start at the top on load (unless the URL targets a #section)
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.addEventListener('load', () => {
+      if (!location.hash) window.scrollTo(0, 0);
+    });
+
+
     document.addEventListener('DOMContentLoaded', () => {
       // Mobile navigation toggle
       const mobileToggle = document.getElementById('mobile-toggle');
