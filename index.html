@@ -84,6 +84,7 @@
     .era-summary::-webkit-details-marker { display: none; }
     details[open] > .era-summary { border-bottom: 1px solid #1E293B; padding-bottom: 1rem; }
     details[open] > .era-summary .era-chevron { transform: rotate(180deg); }
+    details.era-card.era-active h3 { color: #818CF8; }
     .era-summary:hover .era-chevron { border-color: #818CF8; color: #818CF8; }
     .era-summary:focus-visible { outline: 2px solid #818CF8; outline-offset: 6px; border-radius: 8px; }
   </style>
@@ -466,7 +467,7 @@
 <!-- Role Cards List -->
 <div class="mt-10 space-y-6">
 <!-- ROLE 1 -->
-<details open data-era-group="ai-growth" class="era-card rounded-2xl border border-accent/40 bg-card p-6 shadow-card sm:p-8 fade-up">
+<details data-era-group="ai-growth" class="era-card rounded-2xl border border-accent/40 bg-card p-6 shadow-card sm:p-8 fade-up">
 <summary class="era-summary flex cursor-pointer flex-wrap items-start justify-between gap-3 pb-0">
 <div>
 <div class="flex flex-wrap items-center gap-2">
@@ -1312,6 +1313,7 @@
             } else {
               card.classList.add('hidden');
             }
+            card.classList.toggle('era-active', selectedEra !== 'all' && group === selectedEra);
           });
         });
       });
