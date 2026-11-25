@@ -1117,10 +1117,9 @@
 <div>
 <label for="topic-select" class="block text-xs font-semibold text-ink">Opportunity or Topic</label>
 <select id="topic-select" class="mt-1.5 w-full rounded-xl border border-lineWarm bg-surface px-3.5 py-2.5 text-sm text-ink focus:border-accent focus:outline-none">
-<option value="Senior AI / Marketing Strategy & Operations Role">Senior AI / Marketing Strategy &amp; Operations Role</option>
-<option value="Consulting / Advisory">Consulting / Advisory</option>
+<option value="About an Open Role">About an Open Role</option>
 <option value="Speaking / Workshop / Panel">Speaking / Workshop / Panel</option>
-<option value="Executive Networking">Executive Networking &amp; Collaboration</option>
+<option value="Others">Others</option>
 </select>
 </div>
 <div>
@@ -1326,19 +1325,17 @@
       const copyLinkedinDm = document.getElementById('copy-linkedin-dm');
 
       const messages = {
-        'Senior AI / Marketing Strategy & Operations Role':
-          'Hi Priyanka, I reviewed your portfolio and would love to connect regarding a senior AI strategy, marketing operations, or growth leadership opportunity.',
-        'Consulting / Advisory':
-          'Hi Priyanka, your experience across AI workflow automation, analytics, and demand/ABM stood out. Would love to explore a consulting or advisory conversation.',
+        'About an Open Role':
+          'Hi Priyanka, I reviewed your portfolio and would love to connect regarding an open role that could be a strong fit for your AI strategy, marketing operations, and growth leadership experience.',
         'Speaking / Workshop / Panel':
           'Hi Priyanka, I would love to invite you to speak, run a workshop, or join a panel on AI-driven marketing transformation, analytics, and GTM.',
-        'Executive Networking':
+        'Others':
           'Hi Priyanka, great connecting through your portfolio—I’d love to exchange perspectives on AI workflows, marketing strategy, and leadership.',
       };
 
       function updateDraft() {
         if (!topicSelect || !notePreview) return;
-        const base = messages[topicSelect.value] || messages['Executive Networking'];
+        const base = messages[topicSelect.value] || messages['Others'];
         const signOff = senderInput && senderInput.value.trim() ? `\n\nBest,\n${senderInput.value.trim()}` : '';
         notePreview.value = base + signOff;
       }
